@@ -1,4 +1,4 @@
-﻿#test
+﻿#test1
 Function Merge-AppLockerPolicyXml
 {
     [CmdletBinding()]
