@@ -36,9 +36,8 @@
         None. You cannot pipe objects to this function.
 
         .Example
-        Merge-AppLockerPolicyXml -SourceFile C:\Support\SourceFile.xml -AppendFile C:\Support\AppendFile.xml -OutputFile C:\Support\OutputFile.xml 
-
-    #>    
+        Merge-AppLockerPolicyXml -SourceFile C:\Support\SourceFile.xml -AppendFile C:\Support\AppendFile.xml -OutputFile C:\Support\OutputFile.xml
+    #>
     Begin
     {
         [xml]$SourceFile = Get-Content $SourceFile
@@ -66,7 +65,22 @@ Function Get-AppLockerEvent
         [switch]
         $SinceLastApply   
     )
-    
+    <#
+        .SYNOPSIS
+        Retreive Windows AppLocker events.
+
+        .DESCRIPTION
+        Retreive Windows AppLocker events with Id that matches 8003 and 8004.
+
+        .PARAMETER SinceLastApply
+        If supplied, will only pull events since last policy was applied.
+
+        .INPUT
+        None. You cannot pipe objects to this function.
+
+        .Example
+        Get-AppLockerEvent -SinceLastApply
+    #>
     Begin {
         
     }
