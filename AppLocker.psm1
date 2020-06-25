@@ -87,8 +87,7 @@ Function Get-AppLockerEvent
     
     Process
     {
-        $LogName = 'Microsoft-Windows-AppLocker/EXE and DLL'
-        $Properties = @{LogName = $LogName
+        $Properties = @{ProviderName = 'Microsoft-Windows-AppLocker'
                         Id = '8001'}
         If ($SinceLastApply.IsPresent)
         {
