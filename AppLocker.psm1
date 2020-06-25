@@ -82,7 +82,7 @@ Function Get-AppLockerEvent
         Get-AppLockerEvent -SinceLastApply
     #>
     Begin {
-        
+       # 
     }
     
     Process
